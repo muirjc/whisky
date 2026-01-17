@@ -32,6 +32,10 @@
 ## Notes
 
 - All checklist items pass validation
-- Specification is ready for `/speckit.clarify` or `/speckit.plan`
-- Key assumptions documented: flavor profile system uses predefined descriptors, reference database required for similar whisky matching
-- The specification covers 5 user stories with clear priorities (P1 for core features, P2 for differentiating features)
+- Clarification session completed 2026-01-17 (3 questions asked and resolved)
+- Key clarifications:
+  - Reference database: Pre-seeded static database maintained by app owner
+  - Distillery info: Curated static database (no live web fetching)
+  - Social scope: Single-user only, no sharing or social features
+- Out of Scope section added to explicitly bound feature scope
+- Specification is ready for `/speckit.plan`

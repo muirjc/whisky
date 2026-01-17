@@ -69,9 +69,9 @@ As a whisky collector, I want to access information about distilleries that prod
 **Acceptance Scenarios**:
 
 1. **Given** I have a bottle in my collection, **When** I view its distillery information, **Then** I see details about the distillery (location, history, production methods, other expressions)
-2. **Given** I am viewing distillery information, **When** the system fetches web information, **Then** I see current and relevant data about the distillery
-3. **Given** distillery information has been fetched, **When** I view the same distillery later, **Then** I see cached information with an option to refresh
-4. **Given** I want to explore distilleries, **When** I view all distilleries represented in my collection, **Then** I see a list with summary information for each
+2. **Given** I am viewing a bottle, **When** I click on the distillery link, **Then** I see the full distillery profile from the reference database
+3. **Given** I want to explore distilleries, **When** I browse the distillery database, **Then** I see a list of all distilleries with summary information
+4. **Given** I am viewing a distillery profile, **When** I look at notable expressions, **Then** I see other whiskies from this distillery in the reference database
 
 ---
 
@@ -96,8 +96,8 @@ As a whisky collector, I want my collection data to be private and secure so tha
 
 - What happens when a user tries to add a bottle with missing required fields?
   - System displays validation errors indicating which fields are required
-- What happens when web search for distillery information fails or returns no results?
-  - System displays a graceful error message and allows manual entry of distillery information
+- What happens when a distillery is not in the reference database?
+  - System allows users to add bottles with custom distillery names; these bottles won't have linked distillery profiles until the database is updated
 - How does the system handle whiskies with no age statement (NAS)?
   - Age statement is an optional field; NAS bottles are valid entries
 - What happens when the similar whisky algorithm finds no matches?
@@ -127,15 +127,15 @@ As a whisky collector, I want my collection data to be private and secure so tha
 
 **Flavor Profile Matching**
 - **FR-011**: System MUST analyze flavor profiles to identify similar whiskies within the user's collection
-- **FR-012**: System MUST suggest similar whiskies from a reference database based on flavor profile matching
+- **FR-012**: System MUST suggest similar whiskies from a pre-seeded static reference database (maintained by app owner) based on flavor profile matching
 - **FR-013**: System MUST allow users to save recommended whiskies to a wishlist
 - **FR-014**: System MUST provide a collection flavor analysis showing the user's taste preferences
 
 **Distillery Information**
-- **FR-015**: System MUST fetch and display information about distilleries from web sources
-- **FR-016**: System MUST cache distillery information to avoid repeated fetches
-- **FR-017**: System MUST allow users to manually trigger a refresh of distillery information
-- **FR-018**: System MUST display distillery location, history overview, and notable expressions
+- **FR-015**: System MUST display information about distilleries from a curated static distillery database (maintained by app owner)
+- **FR-016**: System MUST link bottles to distillery records in the reference database
+- **FR-017**: System MUST display distillery location, history overview, and notable expressions
+- **FR-018**: System MUST allow browsing all distilleries in the reference database
 
 **User Authentication**
 - **FR-019**: System MUST provide user registration with email and password
@@ -166,12 +166,33 @@ As a whisky collector, I want my collection data to be private and secure so tha
 - **SC-007**: User data remains completely isolated - zero cross-user data leakage
 - **SC-008**: Users report finding useful recommendations in at least 70% of similarity searches
 
+## Clarifications
+
+### Session 2026-01-17
+
+- Q: What is the source of the similar whisky reference database? → A: Pre-seeded static database of common whiskies (maintained by app owner)
+- Q: What is the distillery information retrieval strategy? → A: Curated static distillery database (similar to whisky reference DB)
+- Q: What are the social/sharing boundaries? → A: Single-user only (no sharing, no social features, no public profiles)
+
+## Out of Scope
+
+The following features are explicitly excluded from this version:
+
+- **Social features**: No sharing collections, no public profiles, no following other users
+- **Community features**: No user reviews visible to others, no community ratings, no forums
+- **E-commerce**: No purchasing, no price tracking across retailers, no marketplace
+- **Barcode/label scanning**: No automatic bottle identification via camera
+- **Mobile native apps**: Web application only (responsive design for mobile browsers is in scope)
+- **Multi-user collaboration**: No shared collections, no household accounts
+- **Import/export**: No bulk import from other apps or spreadsheets (may be added later)
+- **Notifications**: No alerts for price changes, new releases, or wishlist availability
+
 ## Assumptions
 
 - Users have a modern web browser with JavaScript enabled
 - Users have an internet connection for distillery information retrieval and reference database access
 - The flavor profile system uses a predefined set of common whisky flavor descriptors rather than free-form tagging
-- Distillery information is sourced from publicly available web data
-- The similar whisky reference database is populated with common whisky data beyond just the user's collection
+- Distillery information is provided via a curated static database maintained by the application owner (no live web fetching)
+- The similar whisky reference database is a pre-seeded static dataset of common whiskies, maintained and updated periodically by the application owner
 - Users are primarily tracking Scotch, Irish, American, Japanese, and other single malt/blended whiskies
 - The application is for personal collection tracking, not commercial inventory management
