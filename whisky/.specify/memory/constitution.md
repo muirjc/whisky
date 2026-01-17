@@ -1,50 +1,149 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+==================
+Version change: 0.0.0 → 1.0.0 (MAJOR: Initial constitution ratification)
+
+Modified principles: N/A (initial version)
+
+Added sections:
+- Core Principles (5 principles)
+- Development Standards
+- Quality Gates
+- Governance
+
+Removed sections: N/A (initial version)
+
+Templates requiring updates:
+- .specify/templates/plan-template.md: ✅ Compatible (Constitution Check section exists)
+- .specify/templates/spec-template.md: ✅ Compatible (requirements align)
+- .specify/templates/tasks-template.md: ✅ Compatible (phase structure supports TDD)
+
+Follow-up TODOs: None
+-->
+
+# Whisky Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. API-First Design
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+All features MUST be designed as APIs before any UI implementation begins. This ensures:
+- Clear separation between business logic and presentation
+- Every endpoint is documented with OpenAPI/Swagger specifications
+- Backend and frontend can be developed and tested independently
+- Third-party integrations are possible from day one
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+**Rationale**: API-first prevents coupling between UI and business logic, enables
+parallel development, and ensures the system is extensible.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. Test-Driven Development (NON-NEGOTIABLE)
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+All new functionality MUST follow the TDD cycle:
+1. Write failing tests that define expected behavior
+2. Implement minimum code to pass tests
+3. Refactor while keeping tests green
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Requirements:
+- Unit test coverage MUST exceed 80% for new code
+- Integration tests MUST cover all API endpoints
+- Contract tests MUST validate external service interactions
+- No PR may be merged with failing tests
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+**Rationale**: TDD ensures correctness, provides living documentation, and enables
+safe refactoring. Skipping tests creates technical debt that compounds over time.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### III. Type Safety
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+All Python code MUST use type hints and pass strict type checking:
+- All function signatures MUST include type annotations
+- mypy (or equivalent) MUST pass with strict mode enabled
+- Pydantic models MUST be used for data validation at boundaries
+- No use of `Any` type without explicit justification in comments
+
+**Rationale**: Type safety catches errors at development time, improves IDE support,
+and serves as inline documentation for expected data shapes.
+
+### IV. Security by Default
+
+Security MUST be built into every feature, not added as an afterthought:
+- All user input MUST be validated and sanitized
+- Authentication and authorization MUST be enforced on all protected endpoints
+- Secrets MUST never be committed to version control
+- Dependencies MUST be regularly audited for vulnerabilities
+- OWASP Top 10 vulnerabilities MUST be addressed in code review
+
+**Rationale**: Security breaches are costly and damage trust. Building security
+into the development process is cheaper than retrofitting it later.
+
+### V. Observability
+
+All production code MUST be observable:
+- Structured logging MUST be used (JSON format) with correlation IDs
+- Key operations MUST emit metrics (latency, error rates, throughput)
+- Errors MUST include sufficient context for debugging without reproducing
+- Health check endpoints MUST be implemented for all services
+
+**Rationale**: Systems that cannot be observed cannot be effectively maintained.
+Observability enables rapid incident response and informed capacity planning.
+
+## Development Standards
+
+### Code Organization
+
+- Backend follows a layered architecture: `api/` → `services/` → `models/`
+- Frontend components are organized by feature, not by type
+- Shared code lives in clearly marked `shared/` or `common/` directories
+- Configuration is externalized via environment variables
+
+### Dependency Management
+
+- All dependencies MUST be pinned to specific versions
+- Dependency updates MUST be reviewed for breaking changes
+- Security patches MUST be applied within 48 hours of disclosure
+- No dependencies with known critical vulnerabilities may be added
+
+### Documentation
+
+- All public APIs MUST have docstrings
+- README MUST include setup instructions that work on a fresh machine
+- Architecture decisions MUST be recorded in ADRs (Architecture Decision Records)
+- Runbooks MUST exist for all production operations
+
+## Quality Gates
+
+All code changes MUST pass these gates before merging:
+
+| Gate | Requirement | Enforcement |
+|------|-------------|-------------|
+| Tests | All tests pass | CI pipeline |
+| Coverage | ≥80% on changed files | CI pipeline |
+| Type Check | mypy strict passes | CI pipeline |
+| Lint | No errors (ruff/flake8) | CI pipeline |
+| Security | No critical vulnerabilities | Dependency scan |
+| Review | At least 1 approval | Branch protection |
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendment Process
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+1. Propose amendment via pull request to this file
+2. Document rationale and impact on existing code
+3. Obtain approval from project maintainers
+4. Update dependent templates if principles change
+5. Communicate changes to all contributors
+
+### Versioning Policy
+
+This constitution follows semantic versioning:
+- **MAJOR**: Removal or redefinition of principles (breaking change)
+- **MINOR**: Addition of new principles or significant guidance expansion
+- **PATCH**: Clarifications, typo fixes, non-semantic refinements
+
+### Compliance
+
+- All pull requests MUST be reviewed for constitution compliance
+- Code review checklists MUST reference applicable principles
+- Violations MUST be documented and remediated before merge
+- Exceptions require explicit justification and maintainer approval
+
+**Version**: 1.0.0 | **Ratified**: 2026-01-17 | **Last Amended**: 2026-01-17
