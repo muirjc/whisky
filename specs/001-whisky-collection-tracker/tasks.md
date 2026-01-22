@@ -25,14 +25,14 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create project directory structure per plan.md (backend/, frontend/, data/, specs/)
-- [ ] T002 [P] Initialize Python backend with FastAPI in backend/pyproject.toml
-- [ ] T003 [P] Initialize TypeScript frontend with React/Vite in frontend/package.json
-- [ ] T004 [P] Configure Python linting (ruff) and type checking (mypy) in backend/pyproject.toml
-- [ ] T005 [P] Configure TypeScript/ESLint and Vitest in frontend/package.json
-- [ ] T006 [P] Create Docker Compose for PostgreSQL development in docker-compose.yml
-- [ ] T007 [P] Create backend .env.example with required environment variables
-- [ ] T008 [P] Create frontend .env.example with VITE_API_URL
+- [x] T001 Create project directory structure per plan.md (backend/, frontend/, data/, specs/)
+- [x] T002 [P] Initialize Python backend with FastAPI in backend/pyproject.toml
+- [x] T003 [P] Initialize TypeScript frontend with React/Vite in frontend/package.json
+- [x] T004 [P] Configure Python linting (ruff) and type checking (mypy) in backend/pyproject.toml
+- [x] T005 [P] Configure TypeScript/ESLint and Vitest in frontend/package.json
+- [x] T006 [P] Create Docker Compose for PostgreSQL development in docker-compose.yml
+- [x] T007 [P] Create backend .env.example with required environment variables
+- [x] T008 [P] Create frontend .env.example with VITE_API_URL
 
 ---
 

@@ -1,0 +1,402 @@
+[
+  {
+    "slug": "lagavulin-16",
+    "name": "Lagavulin 16 Year Old",
+    "distillery_slug": "lagavulin",
+    "age_statement": 16,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 2, "sherried": 3, "spicy": 2, "floral_grassy": 1, "maritime": 4, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 4},
+    "description": "The definitive Islay malt, rich and smoky with a long finish."
+  },
+  {
+    "slug": "lagavulin-8",
+    "name": "Lagavulin 8 Year Old",
+    "distillery_slug": "lagavulin",
+    "age_statement": 8,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 3, "sherried": 1, "spicy": 3, "floral_grassy": 1, "maritime": 4, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 3},
+    "description": "A younger, more vibrant expression celebrating the distillery's 200th anniversary."
+  },
+  {
+    "slug": "laphroaig-10",
+    "name": "Laphroaig 10 Year Old",
+    "distillery_slug": "laphroaig",
+    "age_statement": 10,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 1, "sherried": 1, "spicy": 2, "floral_grassy": 1, "maritime": 5, "honey_sweet": 1, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 1, "medicinal_iodine": 5},
+    "description": "Bold and smoky with signature medicinal, seaweed and peat character."
+  },
+  {
+    "slug": "laphroaig-quarter-cask",
+    "name": "Laphroaig Quarter Cask",
+    "distillery_slug": "laphroaig",
+    "age_statement": null,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 2, "sherried": 1, "spicy": 3, "floral_grassy": 1, "maritime": 4, "honey_sweet": 2, "vanilla_caramel": 3, "oak_woody": 4, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 4},
+    "description": "Extra oak influence from quarter casks adds sweetness and spice."
+  },
+  {
+    "slug": "ardbeg-10",
+    "name": "Ardbeg 10 Year Old",
+    "distillery_slug": "ardbeg",
+    "age_statement": 10,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 3, "sherried": 1, "spicy": 2, "floral_grassy": 1, "maritime": 3, "honey_sweet": 1, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 3},
+    "description": "Complex peat smoke balanced with citrus and espresso notes."
+  },
+  {
+    "slug": "ardbeg-uigeadail",
+    "name": "Ardbeg Uigeadail",
+    "distillery_slug": "ardbeg",
+    "age_statement": null,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 5, "fruity": 3, "sherried": 4, "spicy": 3, "floral_grassy": 1, "maritime": 3, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 3},
+    "description": "Marriage of bourbon and sherry cask-aged whisky, rich and complex."
+  },
+  {
+    "slug": "macallan-12-sherry",
+    "name": "The Macallan 12 Year Old Sherry Oak",
+    "distillery_slug": "macallan",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 5, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Rich dried fruit and spice from exclusive sherry oak cask maturation."
+  },
+  {
+    "slug": "macallan-12-double-cask",
+    "name": "The Macallan 12 Year Old Double Cask",
+    "distillery_slug": "macallan",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 3, "spicy": 2, "floral_grassy": 1, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 4, "oak_woody": 2, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Balance of American and European oak sherry casks for honey and vanilla notes."
+  },
+  {
+    "slug": "glenfiddich-12",
+    "name": "Glenfiddich 12 Year Old",
+    "distillery_slug": "glenfiddich",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 1, "spicy": 1, "floral_grassy": 2, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Signature pear and apple notes with a hint of oak."
+  },
+  {
+    "slug": "glenfiddich-15-solera",
+    "name": "Glenfiddich 15 Year Old Solera",
+    "distillery_slug": "glenfiddich",
+    "age_statement": 15,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 3, "spicy": 2, "floral_grassy": 1, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 3, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Unique solera process creates rich, silky honey and fruit flavors."
+  },
+  {
+    "slug": "glenlivet-12",
+    "name": "The Glenlivet 12 Year Old",
+    "distillery_slug": "glenlivet",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 1, "spicy": 1, "floral_grassy": 3, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Classic Speyside character with tropical fruit and floral notes."
+  },
+  {
+    "slug": "highland-park-12",
+    "name": "Highland Park 12 Year Old Viking Honour",
+    "distillery_slug": "highland-park",
+    "age_statement": 12,
+    "region": "Islands",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 2, "fruity": 3, "sherried": 3, "spicy": 2, "floral_grassy": 2, "maritime": 2, "honey_sweet": 4, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 1},
+    "description": "Heather-honey smokiness with dried fruit and spice."
+  },
+  {
+    "slug": "talisker-10",
+    "name": "Talisker 10 Year Old",
+    "distillery_slug": "talisker",
+    "age_statement": 10,
+    "region": "Islands",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 4, "fruity": 2, "sherried": 1, "spicy": 4, "floral_grassy": 1, "maritime": 5, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 2},
+    "description": "Powerful maritime smoke with distinctive pepper and sea salt."
+  },
+  {
+    "slug": "bowmore-12",
+    "name": "Bowmore 12 Year Old",
+    "distillery_slug": "bowmore",
+    "age_statement": 12,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 3, "fruity": 3, "sherried": 2, "spicy": 2, "floral_grassy": 1, "maritime": 3, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 2},
+    "description": "Balanced Islay character with tropical fruit and gentle smoke."
+  },
+  {
+    "slug": "springbank-10",
+    "name": "Springbank 10 Year Old",
+    "distillery_slug": "springbank",
+    "age_statement": 10,
+    "region": "Campbeltown",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 2, "fruity": 3, "sherried": 2, "spicy": 2, "floral_grassy": 2, "maritime": 3, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 1},
+    "description": "Complex and funky with maritime influence and light peat."
+  },
+  {
+    "slug": "oban-14",
+    "name": "Oban 14 Year Old",
+    "distillery_slug": "oban",
+    "age_statement": 14,
+    "region": "Highland",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 2, "fruity": 3, "sherried": 2, "spicy": 2, "floral_grassy": 1, "maritime": 3, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 1},
+    "description": "Gateway between Highland and Island styles with orange and sea salt."
+  },
+  {
+    "slug": "dalmore-12",
+    "name": "Dalmore 12 Year Old",
+    "distillery_slug": "dalmore",
+    "age_statement": 12,
+    "region": "Highland",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 4, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Chocolate and orange marmalade with rich sherry influence."
+  },
+  {
+    "slug": "glenmorangie-original",
+    "name": "Glenmorangie Original 10 Year Old",
+    "distillery_slug": "glenmorangie",
+    "age_statement": 10,
+    "region": "Highland",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 1, "spicy": 1, "floral_grassy": 3, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 4, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Delicate floral and citrus notes from Scotland's tallest stills."
+  },
+  {
+    "slug": "aberlour-12",
+    "name": "Aberlour 12 Year Old",
+    "distillery_slug": "aberlour",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 4, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Rich sherry influence with Christmas cake spices and dried fruit."
+  },
+  {
+    "slug": "balvenie-12-doublewood",
+    "name": "Balvenie 12 Year Old DoubleWood",
+    "distillery_slug": "balvenie",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 3, "spicy": 2, "floral_grassy": 1, "maritime": 0, "honey_sweet": 5, "vanilla_caramel": 4, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Signature honey and vanilla from bourbon and sherry cask finishing."
+  },
+  {
+    "slug": "caol-ila-12",
+    "name": "Caol Ila 12 Year Old",
+    "distillery_slug": "caol-ila",
+    "age_statement": 12,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 4, "fruity": 3, "sherried": 1, "spicy": 2, "floral_grassy": 1, "maritime": 3, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 2},
+    "description": "Elegant Islay smoke with citrus and olive oil notes."
+  },
+  {
+    "slug": "bunnahabhain-12",
+    "name": "Bunnahabhain 12 Year Old",
+    "distillery_slug": "bunnahabhain",
+    "age_statement": 12,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 1, "fruity": 3, "sherried": 3, "spicy": 2, "floral_grassy": 1, "maritime": 3, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 3, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Unpeated Islay malt with nuts, dried fruit, and sea salt."
+  },
+  {
+    "slug": "bruichladdich-classic-laddie",
+    "name": "Bruichladdich The Classic Laddie",
+    "distillery_slug": "bruichladdich",
+    "age_statement": null,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 1, "spicy": 2, "floral_grassy": 3, "maritime": 2, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 1, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Unpeated Islay malt showcasing barley character and terroir."
+  },
+  {
+    "slug": "jameson-original",
+    "name": "Jameson Irish Whiskey",
+    "distillery_slug": "jameson",
+    "age_statement": null,
+    "region": "Single Pot Still",
+    "country": "Ireland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 1, "spicy": 2, "floral_grassy": 2, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Triple-distilled for smoothness with pot still spice."
+  },
+  {
+    "slug": "redbreast-12",
+    "name": "Redbreast 12 Year Old",
+    "distillery_slug": "redbreast",
+    "age_statement": 12,
+    "region": "Single Pot Still",
+    "country": "Ireland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 4, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Complex pot still whiskey with sherry and orchard fruit."
+  },
+  {
+    "slug": "bushmills-10",
+    "name": "Bushmills 10 Year Old",
+    "distillery_slug": "bushmills",
+    "age_statement": 10,
+    "region": "Single Malt",
+    "country": "Ireland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 2, "spicy": 1, "floral_grassy": 2, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 1, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Smooth Irish single malt with honey and vanilla."
+  },
+  {
+    "slug": "buffalo-trace",
+    "name": "Buffalo Trace Kentucky Straight Bourbon",
+    "distillery_slug": "buffalo-trace",
+    "age_statement": null,
+    "region": "Kentucky",
+    "country": "USA",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 2, "sherried": 0, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 5, "oak_woody": 3, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Classic bourbon with caramel, vanilla, and baking spice."
+  },
+  {
+    "slug": "makers-mark",
+    "name": "Maker's Mark Kentucky Straight Bourbon",
+    "distillery_slug": "makers-mark",
+    "age_statement": null,
+    "region": "Kentucky",
+    "country": "USA",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 2, "sherried": 0, "spicy": 2, "floral_grassy": 1, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 5, "oak_woody": 3, "nutty": 1, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Soft wheated bourbon with caramel and red winter wheat sweetness."
+  },
+  {
+    "slug": "wild-turkey-101",
+    "name": "Wild Turkey 101",
+    "distillery_slug": "wild-turkey",
+    "age_statement": null,
+    "region": "Kentucky",
+    "country": "USA",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 2, "sherried": 0, "spicy": 4, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 4, "oak_woody": 4, "nutty": 2, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Bold and spicy bourbon with deep charred oak character."
+  },
+  {
+    "slug": "woodford-reserve",
+    "name": "Woodford Reserve Kentucky Straight Bourbon",
+    "distillery_slug": "woodford-reserve",
+    "age_statement": null,
+    "region": "Kentucky",
+    "country": "USA",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 0, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 4, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Refined bourbon with rich fruit, spice, and cocoa notes."
+  },
+  {
+    "slug": "jack-daniels-old-no-7",
+    "name": "Jack Daniel's Old No. 7",
+    "distillery_slug": "jack-daniels",
+    "age_statement": null,
+    "region": "Tennessee",
+    "country": "USA",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 2, "sherried": 0, "spicy": 2, "floral_grassy": 0, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 4, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Smooth Tennessee whiskey mellowed through sugar maple charcoal."
+  },
+  {
+    "slug": "yamazaki-12",
+    "name": "Yamazaki 12 Year Old",
+    "distillery_slug": "yamazaki",
+    "age_statement": 12,
+    "region": "Japanese",
+    "country": "Japan",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 2, "spicy": 2, "floral_grassy": 3, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Elegant Japanese single malt with peach, vanilla, and Mizunara oak."
+  },
+  {
+    "slug": "hakushu-12",
+    "name": "Hakushu 12 Year Old",
+    "distillery_slug": "hakushu",
+    "age_statement": 12,
+    "region": "Japanese",
+    "country": "Japan",
+    "flavor_profile": {"smoky_peaty": 1, "fruity": 3, "sherried": 1, "spicy": 2, "floral_grassy": 4, "maritime": 0, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Fresh and herbal forest distillery whisky with subtle smoke."
+  },
+  {
+    "slug": "nikka-yoichi-single-malt",
+    "name": "Nikka Yoichi Single Malt",
+    "distillery_slug": "nikka-yoichi",
+    "age_statement": null,
+    "region": "Japanese",
+    "country": "Japan",
+    "flavor_profile": {"smoky_peaty": 3, "fruity": 3, "sherried": 2, "spicy": 2, "floral_grassy": 1, "maritime": 2, "honey_sweet": 2, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 1},
+    "description": "Bold and peaty Japanese malt from coal-fired stills."
+  },
+  {
+    "slug": "nikka-coffey-grain",
+    "name": "Nikka Coffey Grain",
+    "distillery_slug": "nikka-miyagikyo",
+    "age_statement": null,
+    "region": "Japanese",
+    "country": "Japan",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 1, "spicy": 1, "floral_grassy": 2, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 4, "oak_woody": 2, "nutty": 1, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Sweet and creamy grain whisky from Coffey stills."
+  },
+  {
+    "slug": "glendronach-12",
+    "name": "GlenDronach 12 Year Old",
+    "distillery_slug": "glendronach",
+    "age_statement": 12,
+    "region": "Highland",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 5, "spicy": 3, "floral_grassy": 0, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 3, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Rich sherry bomb with figs, raisins, and Christmas cake."
+  },
+  {
+    "slug": "kilchoman-machir-bay",
+    "name": "Kilchoman Machir Bay",
+    "distillery_slug": "kilchoman",
+    "age_statement": null,
+    "region": "Islay",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 4, "fruity": 3, "sherried": 1, "spicy": 2, "floral_grassy": 2, "maritime": 3, "honey_sweet": 2, "vanilla_caramel": 3, "oak_woody": 2, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 2},
+    "description": "Young farm distillery Islay malt with vanilla and citrus smoke."
+  },
+  {
+    "slug": "glenfarclas-12",
+    "name": "Glenfarclas 12 Year Old",
+    "distillery_slug": "glenfarclas",
+    "age_statement": 12,
+    "region": "Speyside",
+    "country": "Scotland",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 3, "sherried": 4, "spicy": 2, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 2, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Excellent value sherried Speyside with dried fruit and malt."
+  },
+  {
+    "slug": "kavalan-classic",
+    "name": "Kavalan Classic Single Malt",
+    "distillery_slug": "kavalan",
+    "age_statement": null,
+    "region": "Taiwanese",
+    "country": "Taiwan",
+    "flavor_profile": {"smoky_peaty": 0, "fruity": 4, "sherried": 2, "spicy": 2, "floral_grassy": 3, "maritime": 0, "honey_sweet": 4, "vanilla_caramel": 4, "oak_woody": 3, "nutty": 1, "malty_biscuity": 2, "medicinal_iodine": 0},
+    "description": "Tropical Taiwanese whisky with mango, honey, and vanilla."
+  },
+  {
+    "slug": "amrut-fusion",
+    "name": "Amrut Fusion Single Malt",
+    "distillery_slug": "amrut",
+    "age_statement": null,
+    "region": "Indian",
+    "country": "India",
+    "flavor_profile": {"smoky_peaty": 2, "fruity": 3, "sherried": 1, "spicy": 3, "floral_grassy": 1, "maritime": 0, "honey_sweet": 3, "vanilla_caramel": 3, "oak_woody": 3, "nutty": 2, "malty_biscuity": 3, "medicinal_iodine": 0},
+    "description": "Blend of Indian and Scottish barley with tropical intensity."
+  }
+]
