@@ -142,7 +142,7 @@ As a whisky collector, I want my collection data to be private and secure so tha
 - **FR-020**: System MUST authenticate users before allowing access to collection data
 - **FR-021**: System MUST ensure complete data isolation between users
 - **FR-022**: System MUST allow users to change their password
-- **FR-023**: System MUST provide password reset functionality via email
+- **FR-023**: System MUST provide password reset functionality via email *(v1: endpoint exists; email delivery deferred to v2)*
 
 ### Key Entities
 
