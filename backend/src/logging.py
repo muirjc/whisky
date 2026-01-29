@@ -49,7 +49,7 @@ def configure_logging() -> None:
             structlog.contextvars.merge_contextvars,
             structlog.processors.add_log_level,
             structlog.processors.TimeStamper(fmt="iso"),
-            add_correlation_id,
+            add_correlation_id,  # type: ignore[list-item]
             structlog.processors.StackInfoRenderer(),
             structlog.processors.format_exc_info,
             structlog.processors.UnicodeDecoder(),
@@ -75,4 +75,4 @@ def configure_logging() -> None:
 
 def get_logger(name: str = __name__) -> structlog.BoundLogger:
     """Get a configured logger instance."""
-    return structlog.get_logger(name)
+    return structlog.get_logger(name)  # type: ignore[no-any-return]

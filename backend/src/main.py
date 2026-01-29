@@ -47,6 +47,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Add request logging middleware
+from src.middleware.logging import RequestLoggingMiddleware
+
+app.add_middleware(RequestLoggingMiddleware)
+
+# Register error handlers
+from src.middleware.error_handler import register_error_handlers
+
+register_error_handlers(app)
+
 # Include API router
 app.include_router(api_router, prefix="/api/v1")
 

@@ -25,6 +25,7 @@ dependencies = [
     "python-multipart>=0.0.6",
     "structlog>=24.1.0",
     "httpx>=0.26.0",
+    "email-validator>=2.1.0",
 ]
 
 [project.optional-dependencies]
@@ -38,6 +39,9 @@ dev = [
     "types-passlib>=1.7.7.20240106",
     "types-python-jose>=3.3.4.20240106",
 ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
 
 [tool.ruff]
 target-version = "py311"

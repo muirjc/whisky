@@ -46,7 +46,7 @@ def create_cursor_from_item(item: Any, sort_field: str = "id") -> str:
     # Add sort field value if different from id
     if sort_field != "id" and hasattr(item, sort_field):
         value = getattr(item, sort_field)
-        cursor_data[sort_field] = str(value) if value is not None else None
+        cursor_data[sort_field] = str(value) if value is not None else ""
 
     return encode_cursor(cursor_data)
 

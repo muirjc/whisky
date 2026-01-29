@@ -12,12 +12,11 @@ from src.config import get_settings
 from src.models.base import Base
 
 # Import all models here so they are registered with Base.metadata
-# These will be added as the project develops
-# from src.models.user import User
-# from src.models.bottle import Bottle
-# from src.models.distillery import Distillery
-# from src.models.reference_whisky import ReferenceWhisky
-# from src.models.wishlist import WishlistItem
+from src.models.distillery import Distillery  # noqa: F401
+from src.models.reference_whisky import ReferenceWhisky  # noqa: F401
+from src.models.user import User  # noqa: F401
+from src.models.bottle import Bottle  # noqa: F401
+from src.models.wishlist import WishlistItem  # noqa: F401
 
 # this is the Alembic Config object
 config = context.config

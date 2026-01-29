@@ -622,5 +622,44 @@
     "history": "The only distillery on the Isle of Mull, producing two distinct styles.",
     "production_notes": "Produces unpeated Tobermory and heavily peated Ledaig.",
     "website": "https://www.tobermorydistillery.com"
+  },
+  {
+    "slug": "craigellachie",
+    "name": "Craigellachie",
+    "region": "Speyside",
+    "country": "Scotland",
+    "latitude": 57.4494,
+    "longitude": -3.1847,
+    "founded": 1891,
+    "owner": "Bacardi (John Dewar & Sons)",
+    "history": "Built in 1891 at the meeting of the Fiddich and Spey rivers.",
+    "production_notes": "Uses oil-fired stills and worm tubs for a meaty, sulfury new-make character.",
+    "website": "https://www.craigellachie.com"
+  },
+  {
+    "slug": "four-roses",
+    "name": "Four Roses",
+    "region": "Kentucky",
+    "country": "USA",
+    "latitude": 37.9344,
+    "longitude": -85.0281,
+    "founded": 1888,
+    "owner": "Kirin",
+    "history": "Founded in 1888, Four Roses uses ten unique bourbon recipes from two mash bills and five yeast strains.",
+    "production_notes": "Produces ten distinct bourbon recipes blended for a floral, spicy character.",
+    "website": "https://www.fourrosesbourbon.com"
+  },
+  {
+    "slug": "teeling",
+    "name": "Teeling",
+    "region": "Single Malt",
+    "country": "Ireland",
+    "latitude": 53.3377,
+    "longitude": -6.2769,
+    "founded": 2015,
+    "owner": "Teeling Whiskey Company",
+    "history": "The first new distillery in Dublin in over 125 years, opened in 2015.",
+    "production_notes": "Innovative Irish whiskey with wine and rum cask finishes.",
+    "website": "https://www.teelingwhiskey.com"
   }
 ]

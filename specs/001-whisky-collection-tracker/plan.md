@@ -17,7 +17,7 @@ Build a web application for personal whisky collection management featuring bott
 **Project Type**: Web application (frontend + backend)
 **Performance Goals**: <200ms API response time, support 500 bottles per user without degradation
 **Constraints**: Must display distillery info within 5 seconds, bottle search within 10 seconds
-**Scale/Scope**: Single-user collections up to 500 bottles, pre-seeded reference DB of ~5000 whiskies and ~500 distilleries
+**Scale/Scope**: Single-user collections up to 500 bottles, pre-seeded reference DB of ~200 whiskies and ~50 distilleries (expandable)
 
 ## Constitution Check
 
@@ -81,7 +81,7 @@ data/
 └── distilleries.json    # Pre-seeded distillery database
 ```
 
-**Structure Decision**: Web application structure with separate backend (FastAPI/Python) and frontend (React/TypeScript) directories. Reference data stored as JSON seed files in `/data/` for initial database population.
+**Structure Decision**: Web application structure with separate backend (FastAPI/Python) and frontend (React/TypeScript) directories. Reference data stored as JSON seed files in `/data/` for initial database population. Frontend uses type-based organization (components/, pages/, hooks/) rather than feature-based, as the application has a single feature domain (whisky collection).
 
 ## Complexity Tracking
 

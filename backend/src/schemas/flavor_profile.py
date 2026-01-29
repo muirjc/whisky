@@ -47,7 +47,7 @@ class FlavorProfile(BaseModel):
     def from_dict(cls, data: dict[str, int] | None) -> "FlavorProfile":
         """Create from dictionary, with defaults for missing values."""
         if not data:
-            return cls()
+            return cls(**{f: 0 for f in cls.model_fields})
         return cls(**{k: v for k, v in data.items() if k in cls.model_fields})
 
     def to_vector(self) -> list[int]:
