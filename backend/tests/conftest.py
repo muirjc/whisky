@@ -14,6 +14,7 @@ from sqlalchemy.pool import NullPool
 from src.config import get_settings
 from src.db import get_db
 from src.main import app
+from src.middleware.rate_limit import auth_rate_limiter
 from src.models.base import Base
 
 settings = get_settings()
@@ -40,6 +41,7 @@ def event_loop() -> asyncio.AbstractEventLoop:
 @pytest_asyncio.fixture(autouse=True)
 async def setup_db() -> AsyncGenerator[None, None]:
     """Create and drop all tables for each test."""
+    auth_rate_limiter._requests.clear()
     async with test_engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
     yield

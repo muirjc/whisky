@@ -40,6 +40,7 @@ async def create_bottle(
 
     session.add(bottle)
     await session.flush()
+    await session.refresh(bottle)
     return bottle
 
 
@@ -76,6 +77,7 @@ async def update_bottle(
         )
 
     await session.flush()
+    await session.refresh(bottle)
     return bottle
 
 

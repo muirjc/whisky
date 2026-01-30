@@ -22,6 +22,7 @@ async def add_to_wishlist(
     )
     session.add(item)
     await session.flush()
+    await session.refresh(item)
     return item
 
 

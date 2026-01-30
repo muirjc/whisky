@@ -146,9 +146,8 @@ As a whisky collector, I want my collection data to be private and secure so tha
 
 ### Key Entities
 
-- **User**: Represents a collector with their account credentials and preferences. Has many Bottles and one Collection.
-- **Collection**: A user's complete set of tracked whiskies. Belongs to one User, contains many Bottles.
-- **Bottle**: An individual whisky in the collection. Contains name, distillery reference, age, region, country, size, ABV, flavor profile, tasting notes, rating, status, and purchase information.
+- **User**: Represents a collector with their account credentials and preferences. Has many Bottles directly (collection is implicit via user_id foreign key).
+- **Bottle**: An individual whisky in the user's collection. Contains name, distillery reference, age, region, country, size, ABV, flavor profile, tasting notes, rating, status, and purchase information. Belongs to one User via user_id.
 - **Distillery**: A whisky producer. Contains name, location, region, country, history, and production notes. Associated with many Bottles.
 - **FlavorProfile**: A set of flavor descriptors associated with a Bottle. Used for similarity matching and taste analysis.
 - **Wishlist**: A list of desired bottles not yet in the collection. Belongs to one User, contains references to recommended whiskies.
