@@ -9,6 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.models.bottle import Bottle
 from src.schemas.flavor_profile import FlavorProfile
+from src.schemas.reference_whisky import ReferenceWhiskyResponse
 from src.services.matching import find_similar_whiskies
 
 
@@ -58,7 +59,7 @@ async def get_taste_profile(
         int_profile = {k: round(v) for k, v in avg_profile.items()}
         similar = await find_similar_whiskies(session, int_profile, limit=5)
         recommendations = [
-            {"whisky": whisky, "similarity_score": round(score, 3)}
+            {"whisky": ReferenceWhiskyResponse.model_validate(whisky).model_dump(), "similarity_score": round(score, 3)}
             for whisky, score in similar
         ]
 
