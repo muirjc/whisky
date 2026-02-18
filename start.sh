@@ -11,38 +11,51 @@ DB_PASS="whisky"
 DB_NAME="whisky"
 DB_PORT=5432
 
+BACKEND_PID=""
+FRONTEND_PID=""
+
 cleanup() {
     echo "Shutting down..."
-    kill "$BACKEND_PID" "$FRONTEND_PID" 2>/dev/null || true
-    wait "$BACKEND_PID" "$FRONTEND_PID" 2>/dev/null || true
+    [ -n "$BACKEND_PID" ] && kill "$BACKEND_PID" 2>/dev/null || true
+    [ -n "$FRONTEND_PID" ] && kill "$FRONTEND_PID" 2>/dev/null || true
+    wait 2>/dev/null || true
     echo "Done."
 }
 trap cleanup EXIT INT TERM
 
 # --- Database ---
+# Check if container exists and is running
 if docker inspect "$DB_CONTAINER" &>/dev/null; then
-    if [ "$(docker inspect -f '{{.State.Running}}' "$DB_CONTAINER")" != "true" ]; then
-        echo "Starting existing database container..."
-        docker start "$DB_CONTAINER"
-    else
+    if [ "$(docker inspect -f '{{.State.Running}}' "$DB_CONTAINER")" = "true" ]; then
         echo "Database container already running."
+    else
+        echo "Starting existing database container..."
+        docker start "$DB_CONTAINER" >/dev/null
     fi
 else
+    # Remove any orphaned volume
+    docker volume rm "${DB_CONTAINER}-data" 2>/dev/null || true
+
     echo "Creating database container..."
     docker run -d --name "$DB_CONTAINER" \
         -e POSTGRES_USER="$DB_USER" \
         -e POSTGRES_PASSWORD="$DB_PASS" \
         -e POSTGRES_DB="$DB_NAME" \
         -p "$DB_PORT":5432 \
-        --tmpfs /var/lib/postgresql/data \
-        postgres:16-alpine
+        -v "${DB_CONTAINER}-data:/var/lib/postgresql/data" \
+        postgres:15-alpine >/dev/null
 fi
 
+# Wait for PostgreSQL to accept connections
 echo "Waiting for database..."
+sleep 2  # Give container time to initialize
 for i in $(seq 1 30); do
     if docker exec "$DB_CONTAINER" pg_isready -U "$DB_USER" &>/dev/null; then
-        echo "Database ready."
-        break
+        # Verify we can actually connect with password
+        if docker exec "$DB_CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -c "SELECT 1" &>/dev/null; then
+            echo "Database ready."
+            break
+        fi
     fi
     if [ "$i" -eq 30 ]; then
         echo "ERROR: Database failed to start." >&2

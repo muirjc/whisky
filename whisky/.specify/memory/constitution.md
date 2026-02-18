@@ -109,6 +109,11 @@ Observability enables rapid incident response and informed capacity planning.
 - Architecture decisions MUST be recorded in ADRs (Architecture Decision Records)
 - Runbooks MUST exist for all production operations
 
+## Coding Standards
+- Follow PEP8 Coding Standards
+- Implement logging using the python logging module
+- Fully comment all code
+
 ## Quality Gates
 
 All code changes MUST pass these gates before merging:
@@ -146,4 +151,4 @@ This constitution follows semantic versioning:
 - Violations MUST be documented and remediated before merge
 - Exceptions require explicit justification and maintainer approval
 
-**Version**: 1.0.0 | **Ratified**: 2026-01-17 | **Last Amended**: 2026-01-17
+**Version**: 1.0.0 | **Ratified**: 2026-01-17 | **Last Amended**: 2026-02-07
